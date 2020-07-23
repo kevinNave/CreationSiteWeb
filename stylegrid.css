@@ -1,0 +1,256 @@
+ /*corps*/
+ html { 
+     font-size:62.5%;
+	 scroll-behavior: smooth;
+ }
+
+ body {
+	  background-color:white;
+	font-family:Century Gothic;
+    text-align:justify;
+    font-size:1.8rem;
+	}
+	
+
+/*partie header*/
+    #entete {
+       position: absolute;
+       left:2rem; 
+       top:2rem;
+       width:8%;
+    }
+
+    #background {   
+        width:100%;
+    }
+
+    #background:hover {
+        opacity: 100%;
+        transition-duration: 1s;
+    }
+	
+	.sidebar {
+		padding:0;
+		background-color: white;
+    }
+    
+    #recherche {
+        padding:1%;
+        font-size:2rem;	
+        text-align:center;
+        width:95%; 
+        float: right;
+        margin:0;
+
+    }
+
+    #recherche li {
+        display:inline;
+        margin : 1%;
+    }
+	
+	#menu {
+	display:inline-block;
+	padding:1%;
+	font-size:2rem;	
+	text-align:center;
+    width:100%;
+    margin-top:0;
+}
+
+#menu li {
+	display:inline-block;
+    margin : 2rem;
+}
+
+#menu a {
+    display: block;
+    
+}
+
+li a {
+    text-decoration:none;
+    color: black;
+}
+
+/*sous-menus*/
+#menu #smenu { 
+    list-style-type: none; 
+    display: none;
+}
+
+#smenu li {
+    font-size: 1.5rem;
+    padding: 0;
+    margin-right: 0.5rem;
+    text-align: center;
+}
+
+
+#search {
+    font-size:2.5rem;
+    border: none;
+    border-bottom: 2px solid black;
+    width : 40%;
+    height: 4rem;
+    text-align: left;
+    font-family:Century Gothic;
+    background-color: none;
+    margin-left: 15rem; /*a voir si on enleve pas*/
+    /*float: left;-*/
+    
+}
+
+
+/*svg/icones*/
+
+.svg_alone {
+	width:4rem;
+	height:4rem;
+	margin : 1rem;
+	border: 1px solid white;
+	padding: 1rem;
+	border-radius: 1rem;
+    background-color: white;
+}
+
+.svg_header {
+    width:4rem;
+	height:4rem;
+    margin-right : 1rem;
+    margin-top: 1rem;;
+    padding: 0;
+    float: right;  
+}
+
+.svg_header_search {
+    width: 4rem;
+    height: 4rem;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+/*declaration des composants grid*/
+
+/*grid wrapper sur l'ensemble de la page*/
+
+    /*header*/
+	.sidebar {
+        grid-area: sidebar;
+    }
+
+    /*image transition*/
+    .back {
+	    grid-area: back;
+	}
+	
+	/*footer*/
+    .footer {
+        grid-area: footer;
+    }
+
+	 /*grid contenu*/
+    .wrapper_content {
+        grid-area: wrapper_content;
+    }	 
+
+/*positionnement des blocs sur la page*/
+  .wrapper {
+    position: absolute;
+    left : 0;
+    top : 0;
+    bottom: 0;
+    display: grid;
+    grid-template-areas:
+     "sidebar"
+     "back"
+     "wrapper_content"
+     "footer"
+  }
+
+  /*positionnement des blocs dans le footer*/
+  .footer {
+    display: grid;
+	grid-template-columns: 30% 40% 30%;
+    grid-template-areas:
+	"contactUs   legality   followUs"
+	"copyright   copyright   copyright"  
+  }
+
+/*
+  .wrapper_content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+     "content_presentation img_presentation"
+     "img1 content"
+     "content2 img2"
+     "img3 content3"
+     "content_fin_presentation img_fin_presentation"
+     "img_footer img_footer"
+  }
+*/
+
+
+/* Caractéristiques css */
+
+.footer {
+    background-color: black ;
+    color:white;
+    width:100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*partie contact du footer*/
+.contactUs {
+	grid-area: contactUs;
+	padding-bottom:3rem;
+	margin-top: 2rem;
+    text-align:center;
+    
+}
+
+.contactUs a, .legality a {
+	text-decoration: none;
+	color: white;
+    font-size: 1.2rem;	
+}
+
+/*partie mentions légales du footer*/
+.legality {
+	grid-area: legality;
+    margin-top: 2rem;
+    border-left: 1px solid white;
+	border-right: 1px solid white;
+}
+
+/*parties reseaux sociaux du footer*/
+.followUs {
+	grid-area: followUs;
+	margin-top: 2rem;
+}
+
+/*partie copyright du footer*/
+.copyright {
+	grid-area: copyright;
+	background-color: black;
+	font-size: 1rem;
+    margin-top:2rem;
+    border-top: 1px solid white;
+}
+
+/*partie interactions dynamiques*/
+#menu li:hover #smenu {
+    display: block;
+    position: absolute; 
+   /* background-color: white;*/
+ }
+
+
+
+
