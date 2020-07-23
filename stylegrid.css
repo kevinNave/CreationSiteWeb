@@ -31,6 +31,10 @@
         padding-bottom: 0.5rem;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     #background {   
         width:100%;
     }
@@ -194,7 +198,8 @@ li a {
 	grid-template-columns: 30% 40% 30%;
     grid-template-areas:
 	"contactUs   legality   followUs"
-	"copyright   copyright   copyright"  
+    "copyright   copyright   copyright" 
+    "logo-blanc  logo-blanc  logo-blanc" 
   }
 
 #bv1 {
@@ -236,7 +241,7 @@ li a {
 
   .wrapper_mv {
     text-align:center;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
     margin-left: 20%;
     margin-right: 20%;
@@ -275,7 +280,7 @@ li a {
 
 .wrapper_spe {
     background-color: black ;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
     display: grid;
     grid-gap: 1rem;
@@ -314,7 +319,7 @@ li a {
 
 .wrapper_coeur {
     text-align:center;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
     margin-left: 20%;
     margin-right: 20%;
@@ -328,9 +333,86 @@ li a {
 
 .wrapper_zoom {
     grid-area: wrapper_zoom;
-    margin-top: 10rem;
+    margin-top: 5rem;
     background-color: black;
     color: white;
+}
+
+#title-zoom {
+    grid-area: title-zoom;
+    text-align: center;
+}
+
+#img-zoom {
+    grid-area: img-zoom;
+}
+
+#p-zoom {
+    grid-area: p-zoom;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 0;
+}
+
+#accroche {
+    grid-area: accorche;
+    text-align: center;
+}
+
+.wrapper_zoom {
+    background-color: black ;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+  grid-template-areas:
+  "img-zoom  title-zoom  title-zoom"
+  "img-zoom  p-zoom  p-zoom"
+  "img-zoom  img-text  img-text"
+  "img-zoom  accorche  accroche"
+}
+
+.wrapper_blog {
+    grid-area: wrapper_blog;
+}
+
+#img-blog1 {
+    grid-area: img-blog1;
+}
+
+#img-blog2 {
+    grid-area: img-blog2;
+}
+
+#img-blog3 {
+    grid-area: img-blog3;
+}
+
+#title-blog {
+    grid-area: title-blog;
+}
+
+#plus {
+    grid-area: plus;
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    color:black;
+}
+
+.wrapper_blog {
+    text-align:center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-gap: 1rem;
+  grid-template-areas:
+  "title-blog  title-blog  title-blog  "
+  "img-blog1  img-blog2  img-blog3"
+  "plus  plus plus"
 }
 /*
   .wrapper_content {
@@ -359,6 +441,11 @@ li a {
     width:100%;
     text-align: center;
     font-size: 2rem;
+}
+
+#logo-blanc {
+    width: 10rem;
+    margin-bottom: 1rem;
 }
 
 /*partie contact du footer*/
@@ -396,7 +483,6 @@ li a {
 	background-color: black;
 	font-size: 1rem;
     margin-top:2rem;
-    border-top: 1px solid white;
 }
 
 /*partie interactions dynamiques*/
@@ -471,7 +557,7 @@ h1 {
 
 .img-coeur {
     margin-top: 2rem;
-    width: 80%;
+    width: 90%;
     transition-duration: 0.5s;
 }
 
@@ -482,9 +568,9 @@ h1 {
     transition-duration: 0.5s;  
     text-decoration: none;
     color: white;
-    width: 40rem;
+    width: 30rem;
     margin-bottom: 10rem;
-    height: 40rem;
+    height: 30rem;
 }
 
 .info_coeur {
@@ -495,9 +581,9 @@ h1 {
     transition-duration: 0.5s;  
     text-decoration: none;
     color: white;
-    width: 40rem;
-    font-size: 4rem;
-    height: 40rem;
+    width: 30rem;
+    font-size: 3rem;
+    height: 30rem;
     vertical-align: middle;
 }
 
@@ -533,3 +619,63 @@ h1 {
     -webkit-transform:rotateY(180deg);
     transition-duration: 1s;
    }
+
+/*blog*/
+.overlay {
+    position: relative;
+    width: 100%;
+  }
+
+.img-blog {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    height: 40rem;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+.overlay:hover .img-blog {
+    opacity: 0.3;
+}
+  
+.overlay:hover .middle {
+    opacity: 1;
+}
+  
+.champ {
+    background-color: black;
+    border: 3px solid black;
+    color: white;
+    font-size: 16px;
+    padding: 1rem 1rem;
+    transition-duration: 0.5s;
+    font-weight: bold;
+}
+
+.champ:hover {
+    background-color: white;
+    border: 3px solid black;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+div a {
+    text-decoration: none;
+}
+
+#plus:hover {
+    text-decoration: underline;
+}
