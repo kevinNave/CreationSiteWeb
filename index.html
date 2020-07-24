@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="./img/logo_bol.png" />
   <title>MyBowls | Site E-Commerce </title>
-	<link rel="stylesheet" href="stylegrid.css">
+  <link rel="stylesheet" href="stylegrid.css">
+  <link rel="stylesheet" href="mediaquery.css">
   </head>
 
   <body>
@@ -19,6 +20,12 @@
           <li><a href=""> <img class="svg_header" src="./svg/user.svg"> </a></li> 
           <li><a href=""> <img class="svg_header" src="./svg/basket.svg"> </a></li>
         </ul> 
+
+        
+        <div id="bmenu">
+          <input type="checkbox" id="burger">
+          <label for="burger"></label>
+        <div id="menu_links">
 		    <ul id="menu">
 				    <li><a href="index.html"> Accueil </a></li> 
             <li><a href=""> Nos produits </a>
@@ -32,7 +39,9 @@
             <li><a href=""> Nouveautés </a></li> 
             <li><a href=""> Promotions </a></li> 
             <li><a href=""> Nous contacter </a></li> 
-        </ul>     
+        </ul>   
+        </div>
+        </div>  
          </aside>
     </header>
 
@@ -42,7 +51,7 @@
     
     <aside class="wrapper_content">
 
-
+    
     <article class="wrapper_mv">
       <h1 id="title-mv">Nos meilleures ventes</h1>
           <a  class="bv"  href=""><img class="best_vente" alt=image id="bv1" src="./img/bol-humeur.jpg"><p class="prix_mv">49.99€</p></a>
@@ -97,15 +106,16 @@
   </article>
 
   <article class="wrapper_zoom">
-      <h1 id="title-zoom">Un bol acheté, 50% sur le deuxième</h1>
+      <h1 id="title-zoom">Un bol acheté, 50% sur le 2ème</h1>
       <p id="p-zoom">Customisez votre bol !<br><br>
         - gravure d'un prénom<br>
-        - gravure d'une phrase (nombre de lettres limitées selon le modèle)<br>
+        - gravure d'une phrase <br>
         - gravure d'un motif<br>
-        - revêtement avec photo/image<br>
+        - revêtement avec photo/image<br><br>
+        Vous avez du bol de tomber sur nous ! Offre valable jusqu'au 31/07/2020
       </p>
       <img alt="img-zoom" id="img-zoom" src="./img/bol-perso.jpg">
-      <h1 id="accroche">Vous avez du bol de tomber sur nous !!!</h1>
+      <h2 id="accroche"></h2>
   </article>
 
   <article class="wrapper_blog">
