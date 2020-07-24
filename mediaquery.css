@@ -1,7 +1,7 @@
 @media (min-width: 701px) and (max-width: 1200px) {
 
 	#flash {
-		margin-top: 30rem;
+		margin-top: 35rem;
 	}
 
 
@@ -206,6 +206,14 @@
 /*media mobile*/
 @media (min-width: 350px) and (max-width: 700px) {
 
+	#entete {
+		position : absolute;
+		margin-left: 35%;
+		width: 25%;
+		margin-top: 8rem;
+	
+	}
+
 	#burger {
 		position: relative;
 		left: -9999rem;
@@ -309,7 +317,7 @@
 
 
 	#flash {
-		margin-top: 20rem;
+		margin-top: 25rem;
 	}
 
 
@@ -455,12 +463,5 @@
 			margin-left: 25%;
 		}
 
-			
-	#entete {
-		position : absolute;
-		margin-left: 35%;
-		width: 25%;
-		margin-top: 8rem;
-	}
 
 }
