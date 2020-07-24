@@ -206,6 +206,11 @@
 /*media mobile*/
 @media (min-width: 350px) and (max-width: 700px) {
 
+	
+	#search {
+		margin-left: 25%;
+	}
+
 	#entete {
 		position : absolute;
 		margin-left: 35%;
@@ -459,9 +464,6 @@
 			margin-top: 1rem;
 		}
 
-		#search {
-			margin-left: 25%;
-		}
 
 
 }
